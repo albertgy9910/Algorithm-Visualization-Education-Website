@@ -1,0 +1,232 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load i18n %}
+
+{% block content %}
+<head>
+    <style>
+    *{
+    box-sizing: border-box;
+
+    }
+    body {
+        height:auto;
+        margin: 0px;
+        padding:0;
+        }
+iframe {
+            height: 800px;
+            width: 100%;
+            border: 0px;
+            margin: 0 auto;
+        }
+        #frame1{
+        height: 600px;
+
+        }
+        #frame2{
+        height: 1000px;
+
+        }
+        #frame3{
+        height: 1000px;
+
+        }
+        #frame4{
+        height: 550px;
+        width: 90%;
+        }
+
+        </style>
+</head>
+    {% if request.user.is_authenticated %}
+        <div id="content" class="container">
+                <div class="panel panel-blue">
+
+                    <br>
+                  <div class="panel-heading">
+                      <h1 class="panel-title"> Welcome to Neural Network Visualization!</h1>
+                      <br>
+                      <h3 class="panel-title"> Please enjoy the fun of learning.</h3>
+                  </div>
+
+                </div>
+
+        <big><big>{% trans 'Your username is' %} <b>{{ request.user.username }}</b>.</big></big>
+            <br><br>
+
+    <div>
+  <body>
+
+    <iframe  id="frame1"  src="http://www.mistymoon.fun:23333/#discretize=true"
+        frameborder="no"
+        scrolling="no"
+        allowtransparency="yes"></iframe>
+  </body>
+    </div>
+<br><br><br><br><br>
+
+  <div>
+  <body>
+    <iframe id="frame2" src="http://127.0.0.1:1000/"
+        frameborder="no"
+        scrolling="no"
+        allowtransparency="yes"></iframe>
+  </body>
+  </div>
+<br><br><br><br><br>
+  <div>
+  <body>
+    <iframe id="frame3" src="http://127.0.0.1:2/"
+        frameborder="no"
+        scrolling="yes"
+        allowtransparency="yes"></iframe>
+  </body>
+  </div>
+
+
+
+    {% else %}
+
+<div id="content" class="container">
+                <div class="panel panel-blue">
+
+                    <br>
+                  <div class="panel-heading">
+                      <h1 class="panel-title"> Welcome to Neural Network Visualization!</h1>
+                      <br>
+                      <h3 class="panel-title"> You are a guest. Please log in or create an account.</h3>
+                  </div>
+
+                </div>
+    <br>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                        <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion" data-toggle="collapse">
+                            Project Description↵
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-One" class="accordion-body collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <p align="justify"><br>This neural network visualization website can help people who learn neural networks quickly understand and master the concept of neural networks and can also be used as a teaching aid tool for teachers in teaching.<br><br>
+User can create and save a neural network model, and others can retrieve this model through our website.<br><br>
+There’s also a discussion board for users to discuss the content of neural network model. Users can post their questions on the discussion board, and other users can answer these questions.<br><br></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion" class="panel-group">
+                    <!-- Start of introductory panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion" data-toggle="collapse">
+                                Our Audience↵
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-Two" class="accordion-body collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-20">
+
+                                    <p align="justify"><div id="pricing"><br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-sm-6 col-xs-10">
+			<div class="plan">
+				<div class="plan-title">
+					<h4>Teacher</h4>
+
+				</div>
+				<ul>
+					<li>Easy to teach neural network </li>
+					<li>Add topics to discuss with students</li>
+					<li>Work on blackboard</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-10">
+			<div class="plan">
+				<div class="plan-title">
+					<h4>Student</h4>
+				</div>
+				<ul>
+					<li>Easy to learn neural network</li>
+					<li>Discuss with classmates and teachers</li>
+					<li>Take simple notes</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-10">
+			<div class="plan">
+				<div class="plan-title">
+					<h4>Interester</h4>
+				</div>
+				<ul>
+					<li>Get information about the neural network</li>
+					<li>Participate in discussions with professional learners</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div><br>
+</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <div id="accordion" class="panel-group">
+                    <!-- Start of introductory panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion" data-toggle="collapse">
+                                About us↵
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-Three" class="accordion-body collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-7">
+
+                                    <p align="justify"><big><big>Team 41</big></big><br>
+                                        Group members:<br> Geyang Xu,<br> Haihang Hong,<br> Jiacheng Shi, <br> Jiayun Kang, <br>Longxi He, <br>Zetao Qian</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+
+</div>
+    <br>
+    <div>
+  <body>
+
+    <iframe  id="frame4"  src="http://www.mistymoon.fun:23333/#discretize=true"
+        frameborder="no"
+        scrolling="no"
+        allowtransparency="yes"></iframe>
+  </body>
+    </div>
+
+
+    {% endif %}
+
+{% endblock %}
+<!-- pricing section -->
